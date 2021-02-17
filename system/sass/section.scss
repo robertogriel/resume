@@ -22,6 +22,7 @@ section {
             border: var(--divisor) 3px solid;
             width: 90%;
             &.min {
+                display: block;
                 border: var(--bg-color) 1px solid;
                 width: 30%;
             }

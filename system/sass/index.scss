@@ -1,5 +1,6 @@
 main {
     flex-direction: column;
+    margin-bottom: var(--space);
 }
 @media (min-width: 768px) {
     main {

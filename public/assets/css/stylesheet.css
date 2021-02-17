@@ -1,0 +1,216 @@
+:root {
+  --bg-color: #013A6F;
+  --title-color: #02203B;
+  --text: #333;
+  --white: #FFF;
+  --divisor: #70120C;
+  --space: 10px;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Light"), url("../../assets/fonts/OpenSans-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Regular"), url("../../assets/fonts/OpenSans-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Medium"), url("../../assets/fonts/OpenSans-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Bold"), url("../../assets/fonts/OpenSans-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+}
+
+body, main, aside, section, div {
+  display: flex;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+main {
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  main {
+    flex-direction: row-reverse;
+    width: calc(100vw - 300px);
+    justify-content: center;
+  }
+}
+aside {
+  flex-direction: column;
+  background-color: var(--bg-color);
+  color: var(--white);
+}
+aside div {
+  flex-direction: column;
+  padding: var(--space);
+}
+aside picture {
+  display: none;
+}
+aside h1 {
+  font-weight: bold;
+  font-size: 30px;
+}
+aside h2 {
+  font-weight: 600;
+  font-size: 25px;
+}
+aside p.title {
+  background-color: var(--title-color);
+  height: calc(var(--space) * 4);
+  padding: var(--space);
+  margin: var(--space) 0;
+  display: flex;
+  align-items: center;
+  font-size: calc(var(--space) * 2);
+  font-weight: bold;
+}
+aside strong {
+  margin-bottom: var(--space);
+}
+
+@media (min-width: 768px) {
+  aside {
+    min-width: 300px;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+  aside .content picture {
+    display: flex;
+    justify-content: center;
+  }
+  aside .content picture img {
+    width: 200px;
+    height: auto;
+    border-radius: var(--space);
+  }
+}
+section {
+  flex-direction: column;
+}
+section#professional {
+  max-width: 780px;
+  font-size: calc(var(--space) * 2);
+}
+section#professional > h2 {
+  text-align: center;
+  padding: calc(var(--space) * 2);
+}
+section#professional p, section#professional h3 {
+  padding: var(--space);
+}
+section#professional p {
+  margin: var(--space) 0;
+  font-size: 15px;
+}
+section#professional ul {
+  margin: 0;
+}
+section#professional hr {
+  display: none;
+  border: var(--divisor) 3px solid;
+  width: 90%;
+}
+section#professional hr.min {
+  border: var(--bg-color) 1px solid;
+  width: 30%;
+}
+section#professional h3 {
+  border-top: 1px solid #707070;
+  border-bottom: 1px solid #707070;
+  font-weight: bold;
+  font-size: calc(var(--space) * 2);
+  text-transform: uppercase;
+  margin: calc(var(--space) * 2) 0;
+}
+section#professional div.wrap {
+  flex-direction: column;
+}
+section#professional div.wrap > div {
+  flex-direction: column;
+}
+section#professional div.wrap > div .date {
+  font-style: initial;
+}
+section#professional div.wrap .date, section#professional div.wrap .locale, section#professional div.wrap .course, section#professional div.wrap .duration, section#professional div.wrap .company {
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-weight: 600;
+}
+section#professional div.wrap .locale {
+  margin-top: var(--space);
+}
+section#professional div.wrap .date {
+  font-style: italic;
+}
+section#professional div.wrap span {
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  section#professional {
+    font-size: calc(var(--space) * 2);
+    width: calc(100vw - 300px);
+  }
+  section#professional hr {
+    display: block;
+    margin-top: calc(var(--space) * 3);
+  }
+  section#professional h3 {
+    border-top: 0;
+    border-bottom: 0;
+  }
+  section#professional div.wrap {
+    flex-direction: row;
+    padding: var(--space);
+  }
+  section#professional div.wrap p, section#professional div.wrap .locale {
+    margin: 0;
+    padding: 0;
+  }
+  section#professional div.wrap > div {
+    flex-direction: column;
+    min-width: 230px;
+    font-size: 15px;
+    padding-right: 50px;
+    text-align: right;
+  }
+}
+
+/*# sourceMappingURL=stylesheet.css.map */

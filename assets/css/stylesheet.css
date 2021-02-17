@@ -59,6 +59,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 main {
   flex-direction: column;
+  margin-bottom: var(--space);
 }
 
 @media (min-width: 768px) {
@@ -147,6 +148,7 @@ section#professional hr {
   width: 90%;
 }
 section#professional hr.min {
+  display: block;
   border: var(--bg-color) 1px solid;
   width: 30%;
 }
